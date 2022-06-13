@@ -17,7 +17,7 @@ class Kubebuilder < Formula
   end
 
   depends_on "git-lfs" => :build
-  depends_on "go"
+  depends_on "go@1.17"
 
   def install
     goos = Utils.safe_popen_read("#{Formula["go"].bin}/go", "env", "GOOS").chomp
